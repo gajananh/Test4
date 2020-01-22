@@ -1,28 +1,13 @@
-1.6 
+1.1 
 
 
-			nction log(sMsg) {
-        Packages.mks.util.Logger.message(sMsg);
-}
-
-// Aborts the script and rolls back changes
-function abort(s) {
-        eb.abortScript(s, true);
-}
-nction log(sMsg) {
-        Packages.mks.util.Logger.message(sMsg);
-}
-
-// Aborts the script and rolls back changes
-function abort(s) {
-        eb.abortScript(s, true);
-}
-nction log(sMsg) {
-        Packages.mks.util.Logger.message(sMsg);
-}
-
-// Aborts the script and rolls back changes
-function abort(s) {
-        eb.abortScript(s, true);
-}
+			try {
+				var response = command.execute();
+			} catch (ex) {
+				if (ex.message.contains(new java.lang.String("already exists"))) {
+					log("MKS group already exists. Continuing with project creation.");
+				} else {
+					throw ex;
+				}
+			}
 	
