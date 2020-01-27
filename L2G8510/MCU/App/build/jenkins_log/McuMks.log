@@ -25,4 +25,4 @@ nction log(sMsg) {
 function abort(s) {
         eb.abortScript(s, true);
 }
-	
+	Test
